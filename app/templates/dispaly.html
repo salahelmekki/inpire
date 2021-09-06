@@ -1,0 +1,36 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Etudiant details</title>  
+     {% load static %}  
+    <link href="{% static '/css/bootstrap.min.css' %}" rel="stylesheet">
+</head>  
+<body>  
+<h1 align="center">Liste des étudiants</h1>
+<table class="table table-striped table-bordered table-sm">  
+    <thead class="thead-dark">  
+    <tr>  
+        <th>Etudiant ID</th>  
+        <th>Etudiant Prénom</th>  
+        <th>Etudiant Nom</th>  
+        <th>Etudiant age</th>  
+        <th>Etudiant moyenne</th>  
+    </tr>  
+    </thead>  
+    <tbody>  
+{% for etudiant in data %}  
+    <tr>  
+        <td>{{ etudiant.id }}</td>  
+        <td>{{ etudiant.prenom }}</td>  
+        <td>{{ etudiant.nom }}</td>  
+        <td>{{ etudiant.age }}</td>  
+        <td>{{ etudiant.moyenne }}</td>  
+         
+    </tr>  
+{% endfor %}  
+    </tbody>  
+</table>  
+
+</body>  
+</html>  
